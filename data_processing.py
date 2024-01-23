@@ -258,7 +258,7 @@ baseline_test, amusement_test, stress_test = create_sequences_test(s15_baseline,
 baseline_test, amusement_test, stress_test = create_sequences_test(s16_baseline, s16_amusement, s16_stress)
 baseline_test, amusement_test, stress_test = create_sequences_test(s17_baseline, s17_amusement, s17_stress)
         
-#%%
+
 # Combined into stress group, non-stress group and all_data.
 y_baseline = np.array(baseline_test)  
 y_amusement = np.array(amusement_test) 
@@ -269,7 +269,6 @@ T['chest+wrist_segementation_baseline_test'] = y_baseline
 T['chest+wrist_segementation_amusement_test'] = y_amusement
 T['chest+wrist_segementation_stress_test'] = y_stress
 
-#%%
 
 with open("../data/train.pkl", "wb") as fp:
     pickle.dump(D, fp, protocol = pickle.HIGHEST_PROTOCOL)
