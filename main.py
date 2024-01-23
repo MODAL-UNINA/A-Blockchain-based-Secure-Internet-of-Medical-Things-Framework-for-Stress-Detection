@@ -18,8 +18,8 @@ baseline = chest_wrist_segementation_data['chest+wrist_segementation_baseline']
 amusement = chest_wrist_segementation_data['chest+wrist_segementation_amusement']
 stress = chest_wrist_segementation_data['chest+wrist_segementation_stress']
 
-#signal index: ACC: 0 1 2; ECG: 3; EMG: 4; EDA: 5; Resp: 6
-#signal index: ACC: 7 8 9; BVP: 10; EDA: 11
+# chest signal index: ACC: 0 1 2; ECG: 3; EMG: 4; EDA: 5; Resp: 6
+# wrist signal index: ACC: 7 8 9; BVP: 10; EDA: 11
 x_baseline = baseline
 x_amusement = amusement
 x_stress = stress
