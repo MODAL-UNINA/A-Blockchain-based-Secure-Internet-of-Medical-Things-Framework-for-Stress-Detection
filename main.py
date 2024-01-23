@@ -11,7 +11,7 @@ from tensorflow.keras.layers import Bidirectional, BatchNormalization
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 # Load train data
-with open("/home/modal-workbench/Projects/Pian/DeepLearning/chest+wrist_segementation_data-train-4Hz.pkl", "rb") as fp:   #Pickling
+with open("../data/train.pkl", "rb") as fp:   #Pickling
     chest_wrist_segementation_data = pickle.load(fp)
 
 baseline = chest_wrist_segementation_data['chest+wrist_segementation_baseline']           #(33422, 120, 6)
@@ -35,7 +35,7 @@ all_labels = np.squeeze(np.vstack((baseline_labels, amusement_labels, stress_lab
 
 
 # Load test data
-with open("/home/modal-workbench/Projects/Pian/DeepLearning/chest+wrist_segementation_data-test-4Hz.pkl", "rb") as fp:   #Pickling
+with open("../data/test.pkl", "rb") as fp:   #Pickling
     chest_wrist_segementation_data_test = pickle.load(fp)
 
 baseline_test = chest_wrist_segementation_data_test['chest+wrist_segementation_baseline_test']           #(33422, 120, 6)
