@@ -11,12 +11,12 @@ from tensorflow.keras.layers import Bidirectional, BatchNormalization
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 # Load train data
-with open("../data/train.pkl", "rb") as fp:   #Pickling
+with open("../data/train.pkl", "rb") as fp:
     chest_wrist_segementation_data = pickle.load(fp)
 
-baseline = chest_wrist_segementation_data['chest+wrist_segementation_baseline']           #(33422, 120, 6)
-amusement = chest_wrist_segementation_data['chest+wrist_segementation_amusement']         #(9358, 120, 6)
-stress = chest_wrist_segementation_data['chest+wrist_segementation_stress']               #(18133, 120, 6)
+baseline = chest_wrist_segementation_data['chest+wrist_segementation_baseline']
+amusement = chest_wrist_segementation_data['chest+wrist_segementation_amusement']
+stress = chest_wrist_segementation_data['chest+wrist_segementation_stress']
 
 #signal index: ACC: 0 1 2; ECG: 3; EMG: 4; EDA: 5; Resp: 6
 #signal index: ACC: 7 8 9; BVP: 10; EDA: 11
@@ -35,12 +35,12 @@ all_labels = np.squeeze(np.vstack((baseline_labels, amusement_labels, stress_lab
 
 
 # Load test data
-with open("../data/test.pkl", "rb") as fp:   #Pickling
+with open("../data/test.pkl", "rb") as fp:
     chest_wrist_segementation_data_test = pickle.load(fp)
 
-baseline_test = chest_wrist_segementation_data_test['chest+wrist_segementation_baseline_test']           #(33422, 120, 6)
-amusement_test = chest_wrist_segementation_data_test['chest+wrist_segementation_amusement_test']         #(9358, 120, 6)
-stress_test = chest_wrist_segementation_data_test['chest+wrist_segementation_stress_test']               #(18133, 120, 6)
+baseline_test = chest_wrist_segementation_data_test['chest+wrist_segementation_baseline_test']
+amusement_test = chest_wrist_segementation_data_test['chest+wrist_segementation_amusement_test']
+stress_test = chest_wrist_segementation_data_test['chest+wrist_segementation_stress_test']
 
 y_baseline = baseline_test
 y_amusement = amusement_test
